@@ -4,13 +4,13 @@ class Catalogue{
     private static self $instance;
     private array $articles;
 
-    private function __construct(){
-        $this->articles = [];
+    private function __construct(array $SomeArticles){
+        $this->articles = $SomeArticles;
     }
 
-    public static function getInstance(): self{
+    public static function getInstance(array $someArticles = []): self{
         if (is_null(self::$instance )){
-            self::$instance = new Catalogue();
+            self::$instance = new Catalogue($someArticles);
         }
         return self::$instance;
     }
