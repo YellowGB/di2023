@@ -11,7 +11,7 @@ class ArticleCreator
         $catalogue = Catalogue::getInstance();
 
         $displayer->show();
-        $catalogue->addArticle("Oulala");
+        $catalogue->addArticle($nom);
         $displayer->show();
 
         return true;
